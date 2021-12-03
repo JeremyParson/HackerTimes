@@ -1,5 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto+Slab:wght@500&family=Source+Sans+Pro:wght@200;400;600&display=swap');
 
+body {
+    background-color: rgb(235,233,235);
+}
+
+.newspaper-container {
+    padding: 1em;
+    border-radius: 1%;
+    box-shadow: rgb(128, 126, 128) 3px 3px 6px;
+    background-color: whitesmoke;
+    margin: auto;
+    width: 95vw;
+}
+
 h1 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-weight: bolder;
@@ -11,12 +24,17 @@ h5 {
 }
 
 nav {
+    background-color: inherit;
+    position: sticky;
+    top:5px;
+    text-align: center;
     border-top: 1px solid gray;
     border-bottom: 1px solid gray;
 }
 
 li {
     display: inline-block;
+    margin: 0 2% 0 2%;
 }
 
 a {
@@ -32,14 +50,12 @@ main > img {
 }
 
 .more-articles {
-    margin: 0 auto 0 auto;
     text-align: center;
 }
 
 section {
     display: inline-block;
     width: 48%;
-    padding: auto;
 }
 
 section h4, p {
@@ -48,4 +64,25 @@ section h4, p {
 
 section > img {
     width: 100%;
+}
+
+.even-more-articles {
+    display: grid;
+    grid-template-columns: [start] 1fr [middle] 1fr [end];
+    grid-template-rows: [start] 1fr [middle] 1fr [end];
+}
+
+.even-more-articles section {
+    width: 95%;
+}
+
+.grid-left {
+    grid-column-start: start;
+    grid-column-end: span middle;
+    grid-row-start: start;
+    grid-row-end: span end;
+}
+
+.grid-left img {
+    filter: grayscale(100%)
 }
